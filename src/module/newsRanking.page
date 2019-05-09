@@ -17,11 +17,11 @@
   module.exports = {
     created: function (params) {
       setTimeout(() => {
-        console.log(this)
+        // console.log(this)
         const domList = this.$el.getElementsByClassName('index')
         for(let index = 0; index < domList.length; index++) {
           const element = domList[index]
-          console.log(element)
+          // console.log(element)
           element.innerText = index + 1
           if (index < 3) {
             element.style.background = '#914920'

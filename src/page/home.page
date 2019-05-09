@@ -19,17 +19,17 @@
       <div class="news-list-box clear">
         <!-- 左边卡片 -->
         <div class="news-list-card">
-          <temple name="cardTitleBar" src="./src/module/cardTitleBar.page"></temple>
+          <temple name="cardTitleBar" title="协会动态" src="./src/module/cardTitleBar.page"></temple>
           <temple name="newsList" src="./src/module/newsList.page"></temple>
         </div>
         <!-- 中间卡片 -->
         <div class="news-list-card">
-          <temple name="cardTitleBar" src="./src/module/cardTitleBar.page"></temple>
+          <temple name="cardTitleBar2" title="评&nbsp;&nbsp;论" src="./src/module/cardTitleBar.page"></temple>
           <temple name="newsList" src="./src/module/newsList.page"></temple>
         </div>
         <!-- 右边卡片 -->
         <div class="news-list-card">
-          <temple name="cardTitleBar" src="./src/module/cardTitleBar.page"></temple>
+          <temple name="cardTitleBar3" title="视&nbsp;&nbsp;频" src="./src/module/cardTitleBar.page"></temple>
           <temple name="infoBox" src="./src/module/infoBox.page"></temple>
         </div>
       </div>
@@ -42,9 +42,10 @@
         </div>
         <!-- 右侧新闻排行区域 -->
         <div class="right float">
-          <temple name="cardTitleBar" src="./src/module/cardTitleBar.page"></temple>
+          <temple name="cardTitleBar4" title="新闻排行" src="./src/module/cardTitleBar.page"></temple>
           <temple name="newsRanking" src="./src/module/newsRanking.page"></temple>
           <div class="title-bar">推荐</div>
+          <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
           <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
           <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
           <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
@@ -129,9 +130,9 @@
   }
   // 分页新闻列表
   .paging-news {
-    padding: 0 20px;
+    padding: 0 40px;
     .o-newsBox {
-      width: 600px;
+      width: 590px;
     }
     .right .ad {
       width: 285px;

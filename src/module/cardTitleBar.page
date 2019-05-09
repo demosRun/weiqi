@@ -1,5 +1,5 @@
 <template>
-  <div class="card-title-bar">协会动态<div class="more"><a href="#"></a></div></div>
+  <div class="card-title-bar">{{prop.title}}<div class="more"><a href="#"></a></div></div>
 </template>
 
 <style lang="less">

@@ -1,12 +1,12 @@
 <template>
   <div class="pagination-bar clear">
     <div class="pagination-box">
-      <a class="pagination">1</a>
-      <a class="pagination">2</a>
-      <a class="pagination">3</a>
-      <a class="pagination">4</a>
-      <a class="pagination">5</a>
-      <a class="pagination" >下一页</a>
+      <a href="#" class="pagination">1</a>
+      <a href="#" class="pagination">2</a>
+      <a href="#" class="pagination">3</a>
+      <a href="#" class="pagination">4</a>
+      <a href="#" class="pagination">5</a>
+      <a href="#" class="pagination">下一页</a>
     </div>
   </div>
 </template>
@@ -28,6 +28,8 @@ a {
   padding: 10px 15px;
   margin: 0 5px;
   text-decoration: none;
+  color: unset;
+  font-size: 12px;
 }
 a:hover {
   background: #cc3333;

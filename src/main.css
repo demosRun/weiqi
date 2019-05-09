@@ -60,5 +60,28 @@ a:hover {
 }
 
 .paging-news .right {
-  padding-left: 60px;
+  padding-left: 30px;
+}
+
+.ad {
+  margin: 20px 40px;
+}
+
+/* 轮播图按钮颜色 */
+.o-banner .pagination-pPX8XxuUyIehAAEu .swiper-pagination-switch {
+  background-color: #e7ccb7;
+  width: 8px;
+  height: 8px;
+}
+
+.o-banner .left .pagination-pPX8XxuUyIehAAEu .swiper-active-switch {
+  background-color: #86603b;
+}
+
+.no-image .text-box p {
+  height: 40px;
+}
+
+.no-image {
+  padding-bottom: 20px;
 }

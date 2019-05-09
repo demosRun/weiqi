@@ -1,5 +1,5 @@
 <template>
-  <div class="title-bar">
+  <div class="title-bar-RVyDyvJu8Y0Ui1bB">
     <span class="title-bar-item" @for="item in data.itemLiat">
       <a target="_blank" href="{{item.url}}">{{item.name}}</a>
     </span>
@@ -25,32 +25,33 @@
 </script>
 
 <style lang="less">
-.title-bar {
-  max-width: 920px;
+.title-bar-RVyDyvJu8Y0Ui1bB {
+  max-width: 960px;
   margin: 0 auto;
   font-size: 18px;
   height: 50px;
   line-height: 50px;
-  padding: 0 40px;
+  padding: 0 20px;
   background-image: url('@&title.png&');
   a {
     color: #9d7657;
     font-weight: bold;
     display: block;
+    font-size: 20px;
   }
   a:hover {
-    color: white;
+    color: #9d7657;
   }
+  .title-bar-item {
+    width: 120px;
+    display: block;
+    color: white;
+    float: left;
+    margin: 10px 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
 
-}
-.title-bar-item {
-  width: 110px;
-  display: block;
-  color: white;
-  float: left;
-  margin: 10px 0;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-}
 </style>
