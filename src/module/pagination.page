@@ -1,0 +1,37 @@
+<template>
+  <div class="pagination-bar clear">
+    <div class="pagination-box">
+      <a class="pagination">1</a>
+      <a class="pagination">2</a>
+      <a class="pagination">3</a>
+      <a class="pagination">4</a>
+      <a class="pagination">5</a>
+      <a class="pagination" >下一页</a>
+    </div>
+  </div>
+</template>
+
+<style lang="less">
+.pagination-bar {
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  padding: 20px 0;
+}
+.pagination {
+  display: inline;
+}
+a {
+  display: block;
+  border: #dddad2 1px solid;
+  background: #f7f6f3;
+  padding: 10px 15px;
+  margin: 0 5px;
+  text-decoration: none;
+}
+a:hover {
+  background: #cc3333;
+  color: #fff;
+  text-decoration: none;
+}
+</style>

@@ -1,0 +1,31 @@
+<template>
+  <div class="news-head">
+    <h1 class="main-text">阿森纳1-0返前四 对手送礼奥巴破门</h1>
+    <div class="subheading">
+      <p class="subheading-item">标题标题标题标题</p>
+      <p class="subheading-item">标题标题标题标题</p>
+      <p class="subheading-item">标题标题标题标题</p>
+    </div>
+  </div>
+</template>
+
+<style lang="less">
+.news-head {
+  width: 440px;
+  padding: 20px;
+}
+.main-text {
+  color: #ce262a;
+  font-size: 24px;
+}
+.subheading {
+  position: relative;
+}
+.subheading-item {
+  display: inline-block;
+  width: 32%;
+  font-size: 14px;
+  color: #595757;
+  overflow: hidden;
+}
+</style>

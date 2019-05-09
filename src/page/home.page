@@ -1,0 +1,150 @@
+<template>
+  <div class="example">
+    <temple name="topBar" src="https://owo.ink/public/7d7233398a2d8e3dbfe0c51db7158223.page"></temple>
+    <!-- 主要内容区域 -->
+    <div class="home-content">
+      <temple name="titleBar" src="./src/module/titleBar.page"></temple>
+      <temple name="realTimeBar" src="https://owo.ink/public/fa0aa211a3ff2c12d7f4b339608d0613.page"></temple>
+      <!-- 轮播图区域 -->
+      <div class="banner clear">
+        <div class="float">
+          <temple name="banner" src="https://owo.ink/public/56cab29ab039422b54b85fc89a12faf6.page"></temple>
+        </div>
+        <div class="float news-item-box">
+          <temple name="newsHead" src="./src/module/newsHead.page"></temple>
+          <temple name="newsList" src="./src/module/newsList.page"></temple>
+        </div>
+      </div>
+      <!-- 新闻列表区域 -->
+      <div class="news-list-box clear">
+        <!-- 左边卡片 -->
+        <div class="news-list-card">
+          <temple name="cardTitleBar" src="./src/module/cardTitleBar.page"></temple>
+          <temple name="newsList" src="./src/module/newsList.page"></temple>
+        </div>
+        <!-- 中间卡片 -->
+        <div class="news-list-card">
+          <temple name="cardTitleBar" src="./src/module/cardTitleBar.page"></temple>
+          <temple name="newsList" src="./src/module/newsList.page"></temple>
+        </div>
+        <!-- 右边卡片 -->
+        <div class="news-list-card">
+          <temple name="cardTitleBar" src="./src/module/cardTitleBar.page"></temple>
+          <temple name="infoBox" src="./src/module/infoBox.page"></temple>
+        </div>
+      </div>
+      <!-- 广告位 -->
+      <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
+      <!-- 分页新闻区域 -->
+      <div class="paging-news clear">
+        <div class="left float">
+          <temple name="newsBox" src="./src/module/newsBox.page"></temple>
+        </div>
+        <!-- 右侧新闻排行区域 -->
+        <div class="right float">
+          <temple name="cardTitleBar" src="./src/module/cardTitleBar.page"></temple>
+          <temple name="newsRanking" src="./src/module/newsRanking.page"></temple>
+          <div class="title-bar">推荐</div>
+          <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
+          <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
+          <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
+        </div>
+      </div>
+    </div>
+    <!-- 右侧悬浮 -->
+    <!-- 暂时没有所以隐藏 -->
+    <temple name="float" src="https://owo.ink/public/e6ab7da94b30399ecf828f1c8c704521.page"></temple>
+    <!-- 底部版权信息 -->
+    <temple name="copyright" src="https://owo.ink/public/1a09200bec9534a889b83834094ecb3e.page"></temple>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+    }
+  }
+</script>
+
+
+<style lang="less">
+  .example {
+    background-image: url('@&bg.jpg&');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .click {
+      color: #009fe9;
+      cursor: pointer;
+    }
+    .click:hover {
+      color: gold;
+    }
+  }
+  .home-content {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .search-bar {
+    height: 60px;
+  }
+  .content-box {
+    margin: 0 20px;
+    padding: 10px 0;
+  }
+  .float {
+    float: left;
+  }
+  // 清除广告区域浮动
+  .clear:after {
+    content:"";				/*设置内容为空*/
+    height:0;				/*高度为0*/
+    line-height:0;			/*行高为0*/
+    display:block;			/*将文本转为块级元素*/
+    visibility:hidden;		/*将元素隐藏*/
+    clear:both;				/*清除浮动*/
+  }
+  .news-item-box {
+    height: 370px;
+  }
+  // 新闻小卡片样式
+  .news-list-box {
+    padding: 0 20px;
+    .news-list-card {
+      width: 300px;
+      background-color: #fff8f4;
+      float: left;
+      margin: 0 10px;
+    }
+    .consultation-item {
+      font-size: 12px;
+      line-height: 30px;
+      height: 30px;
+    }
+    .consultation-box  {
+      height: 180px;
+      overflow: hidden;
+      padding: 20px 5px;
+    }
+  }
+  // 分页新闻列表
+  .paging-news {
+    padding: 0 20px;
+    .o-newsBox {
+      width: 600px;
+    }
+    .right .ad {
+      width: 285px;
+      height: 95px;
+      padding: 0;
+      margin: 15px 0px;
+      line-height: 95px;
+    }
+  }
+  .title-bar {
+    color: #934e16;
+    font-size: 20px;
+    letter-spacing: 10px;
+    font-weight: bold;
+  }
+</style>

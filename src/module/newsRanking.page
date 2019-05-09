@@ -1,0 +1,85 @@
+<template>
+  <div class="ranking">       
+    <div class="ranking-item"><span class="index"></span><a href="/n1/2019/0507/c14820-31070572.html" target="_blank">中国男篮公布集训名单</a></div>
+    <div class="ranking-item"><span class="index"></span><a href="/n1/2019/0508/c383223-31074423.html" title="2019年辽宁·阜新中国汽车场地越野锦标赛将于阜新开赛" target="_blank">2019年辽宁·阜新中国汽车场地…</a></div>
+    <div class="ranking-item"><span class="index"></span><a href="/n1/2019/0508/c14820-31072778.html" target="_blank">中国男篮公布集训名单</a></div>
+    <div class="ranking-item"><span class="index"></span><a href="/n1/2019/0508/c22141-31072951.html" title="欧冠-奇迹！奥里吉维纳尔杜姆双响上演逆转 利物浦4：0胜巴萨打入决赛" target="_blank">欧冠-奇迹！奥里吉维纳尔杜姆双响…</a></div>
+    <div class="ranking-item"><span class="index"></span><a href="/n1/2019/0508/c48286-31073476.html" target="_blank">朱婷留洋第三季：盛名之下&nbsp;收获从容</a></div>
+    <div class="ranking-item"><span class="index"></span><a href="/n1/2019/0507/c22149-31071217.html" target="_blank">新一届中国男篮下周集结备战世界杯</a></div>
+    <div class="ranking-item"><span class="index"></span><a href="http://wlgames.people.cn/n1/2019/0506/c425794-31069631.html" title="青岛莱西等你来!2019世界休闲体育大会赛事正式启动" target="_blank">青岛莱西等你来!2019世界休闲…</a></div>
+    <div class="ranking-item"><span class="index"></span><a href="/n1/2019/0506/c22149-31066312.html" target="_blank">CBA观察：“战国时代”夺冠靠积淀</a></div>
+    <div class="ranking-item"><span class="index"></span><a href="/n1/2019/0507/c22134-31072640.html" title="亚冠-金信煜破门 国安0:1不敌全北跌至小组第三" target="_blank">亚冠-金信煜破门&nbsp;国安0:1不敌…</a></div>
+    <div class="ranking-item"><span class="index"></span><a href="http://qipai.people.com.cn/n1/2019/0508/c426667-31074165.html" title="“嫘祖杯”第32届中国围棋名人战正式开幕" target="_blank">“嫘祖杯”第32届中国围棋名人战…</a></div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    created: function (params) {
+      setTimeout(() => {
+        console.log(this)
+        const domList = this.$el.getElementsByClassName('index')
+        for(let index = 0; index < domList.length; index++) {
+          const element = domList[index]
+          console.log(element)
+          element.innerText = index + 1
+          if (index < 3) {
+            element.style.background = '#914920'
+          }
+        }
+      }, 0)
+    }
+  }
+</script>
+
+<style lang="less">
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  list-style: none;
+}
+.ranking-item {
+  padding: 5px 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.ranking {
+  width: 260px;
+  padding: 20px;
+  font-size: 12px;
+  background: #f8f8f8;
+}
+div:before {
+  background-color: aqua;
+  border-radius: 10px;
+}
+span {
+  background-color: #b5b5b5;
+  width: 20px;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 10px;
+  float: left;
+  margin-right: 10px;
+}
+a {
+  color: #595757;
+  width: 230px;
+  overflow: hidden;
+  height: 20px;
+  float: left;
+}
+.ranking-item:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+</style>

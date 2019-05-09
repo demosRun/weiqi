@@ -1,0 +1,153 @@
+<template>
+  <div class="news-card">
+    <div class="news-content clear">
+      <slot></slot>
+      <div class="text-box">
+        <h1><a href="#">国安归化球员双双登场李可表示拿到3分更重要</a></h1>
+        <p><a href="#">第一次在工体出场就收获了归化球员首球，李可表示：“今天大家表现得特别棒，我第一次在工体主场出场，就进了一个球，非常有意义。但这并不是我个人的事情，我更为今天的3分感到高兴。…</a></p>
+      </div>
+    </div>
+    <div class="info-bar">
+      <div class="tips">
+        <div class="tip"><a href="#">体育</a></div>
+        <div class="tip"><a href="#">国内足球</a></div>
+        <div class="tip"><a href="#">2019中超</a></div>
+      </div>
+      <div class="message">
+        <a href="#"></a>
+      </div>
+      <!-- 分享按钮 -->
+      <div class="bshare-custom fr">
+        <div class="bsPromo bsPromo2"></div>
+        <div class="bsPromo bsPromo2"></div>
+        <a title="更多平台" class="bshare-more"></a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      // 判断是否包含图片
+      const imageBoxList = this.$el.getElementsByClassName('image-box')
+      console.log(imageBoxList.length)
+      if (imageBoxList.length > 0) {
+        this.$el.style.height = '220px'
+        this.$el.getElementsByClassName('news-content')[0].classList.add('image')
+      }
+    }
+  }
+</script>
+
+<style lang="less">
+.news-card {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #5b5b5b;
+}
+a, img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.image-box {
+  width: 250px;
+  height: 156px;
+  float: left;
+}
+.text-box {
+  float: left;
+  h1 {
+    max-height: 66px;
+    overflow: hidden;
+    font-size: 24px;
+    font-weight: normal;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 20px;
+    text-justify: inter-ideograph;
+    word-break: break-all;
+    text-align: left;
+    text-indent: 24px;
+    color: #595757;
+    height: 80px;
+    overflow: hidden;
+  }
+}
+.image {
+  .text-box {
+    width: 325px;
+    padding-left: 25px;
+  }
+}
+.tips:before {
+  content: url('http://sports.people.com.cn/img/MAIN/2016/10/116825/images/icon4.gif');
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+.tips {
+  padding: 10px 0;
+  line-height: 20px;
+  position: relative;
+}
+.tip:nth-last-child(1) {
+  border-right: none;
+}
+.tip {
+  display: inline-block;
+  border-right: 1px solid #ccc;
+  padding: 0 5px;
+  width: 55px;
+  text-align: center;
+  a {
+    font-size: 12px;
+    color: #ccc;
+  }
+}
+.info-bar {
+  position: relative;
+}
+.message {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+}
+// 留言
+.message {
+  background-image: url('http://sports.people.com.cn/img/MAIN/2016/10/116825/images/icon2b.gif');
+}
+.bshare-custom {
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url('http://sports.people.com.cn/img/MAIN/2016/10/116825/images/icon3.gif');
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+a {
+  color: unset;
+}
+</style>

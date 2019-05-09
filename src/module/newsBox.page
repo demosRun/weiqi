@@ -1,0 +1,141 @@
+<template>
+  <div class="switch-bar">
+    <div class="title-bar clear">
+      <span class="active title-bar-item">全&nbsp;&nbsp;部</span>
+      <span class="title-bar-item">职业竞技</span>
+      <span class="title-bar-item">业余普及</span>
+      <span class="title-bar-item">产&nbsp;&nbsp;业</span>
+    </div>
+    <div class="consultation-panel">
+      <div class="consultation-bar">
+        <temple name="newsCard" src="./src/module/newsCard.page">
+          <div class="image-box">
+            <a href="#">
+              <img src="@&image.png&"/>
+            </a>
+          </div>
+        </temple>
+        <temple name="newsCard1" src="./src/module/newsCard.page"></temple>
+        <temple name="newsCard2" src="./src/module/newsCard.page"></temple>
+        <temple name="newsCard3" src="./src/module/newsCard.page">
+          <div class="image-box">
+            <a href="#">
+              <img src="@&image.png&"/>
+            </a>
+          </div>
+        </temple>
+        <temple name="pagination" src="./src/module/pagination.page"></temple>
+      </div>
+      <div class="consultation-bar">
+        <temple name="newsCard4" src="./src/module/newsCard.page"></temple>
+      </div>
+      <div class="consultation-bar">
+        <temple name="newsCard5" src="./src/module/newsCard.page"></temple>
+      </div>
+      <div class="consultation-bar">
+        <temple name="newsCard6" src="./src/module/newsCard.page"></temple>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      activeIndex: 0
+    },
+    created: function () {
+      const switchBarWidth = this.$el.offsetWidth
+      const titleItem = this.$el.getElementsByClassName('title-bar-item')
+      const consultationBar = this.$el.getElementsByClassName('consultation-bar')
+      // 设置默认内容高度
+      // 内容元素
+      setTimeout(() => {
+        const contentDom = this.$el.getElementsByClassName('consultation-panel')[0].children[0]
+        // 找到活跃元素
+        // console.log(contentDom.offsetHeight)
+        this.$el.style.height = contentDom.offsetHeight + 54 + 'px'
+      }, 0)
+
+      // 清除活跃标记
+      function clear () {
+        for (let index = 0; index < titleItem.length; index++) {
+          const element = titleItem[index]
+          element.classList.remove('active')
+        }
+      }
+      for (let index = 0; index < titleItem.length; index++) {
+        const element = titleItem[index]
+        element.setAttribute('index', index)
+        // 鼠标悬浮事件
+        element.onmouseover = (event) => {
+          const el = event.target
+          clear()
+          // 选中的项目标号
+          const checkIndex = parseInt(el.getAttribute('index'))
+          // 内容元素
+          const contentDom = this.$el.getElementsByClassName('consultation-panel')[0].children[checkIndex]
+          // 找到活跃元素
+          this.$el.style.height = contentDom.offsetHeight + 54 + 'px'
+          el.classList.add('active')
+          // 让显示区域滚动到指定位置
+          panel.style.left = (-index * switchBarWidth) + 'px'
+        }
+        element.onclick = function (event) {
+          const el = event.target
+          clear()
+          el.classList.add('active')
+          this.$el.style.height = el.offsetHeight
+          // 让显示区域滚动到指定位置
+          panel.style.left = (-index * switchBarWidth) + 'px'
+        }
+      }
+
+      for (let index = 0; index < consultationBar.length; index++) {
+        const element = consultationBar[index]
+        element.style.width = switchBarWidth + 'px'
+      }
+      const panel = document.getElementsByClassName('consultation-panel')[0]
+      panel.style.width = (panel.children.length - 1) * switchBarWidth + 'px'
+    }
+  }
+</script>
+
+<style lang="less">
+.switch-bar {
+  overflow: hidden;
+  position: relative;
+}
+.title-bar {
+  font-size: 18px;
+  position: relative;
+  border-top: 1px solid gainsboro;
+}
+.title-bar .active {
+  color: #e70012;
+  font-weight: bold;
+  border-bottom: 3px solid #e22f1a;
+}
+.title-bar-item {
+  cursor: pointer;
+  line-height: 50px;
+  letter-spacing: 5px;
+  color: #9d7657;
+  box-sizing: border-box;
+  border-bottom: 3px solid #e5e5e5;
+  display: block;
+  float: left;
+  width: 25%;
+  padding-left: 10px;
+  text-align: left;
+}
+.consultation-bar {
+  height: 100%;
+  float: left;
+}
+.consultation-panel {
+  position: absolute;
+  left: 0;
+}
+</style>

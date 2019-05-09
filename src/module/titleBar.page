@@ -1,0 +1,56 @@
+<template>
+  <div class="title-bar">
+    <span class="title-bar-item" @for="item in data.itemLiat">
+      <a target="_blank" href="{{item.url}}">{{item.name}}</a>
+    </span>
+    <div class="clear"></div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      itemLiat: [
+        {"name": "职业竞技", "url": "http://www.people.com.cn/"},
+        {"name": "业余普及", "url": "http://www.people.com.cn/"},
+        {"name": "产    业", "url": "http://www.people.com.cn/"},
+        {"name": "评    论", "url": "http://www.people.com.cn/"},
+        {"name": "视    频", "url": "http://www.people.com.cn/"},
+        {"name": "围棋名人战", "url": "http://www.people.com.cn/"},
+        {"name": "棋 牌", "url": "http://www.people.com.cn/"},
+        {"name": "体 育", "url": "http://www.people.com.cn/"},
+      ]
+    }
+  }
+</script>
+
+<style lang="less">
+.title-bar {
+  max-width: 920px;
+  margin: 0 auto;
+  font-size: 18px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 40px;
+  background-image: url('@&title.png&');
+  a {
+    color: #9d7657;
+    font-weight: bold;
+    display: block;
+  }
+  a:hover {
+    color: white;
+  }
+
+}
+.title-bar-item {
+  width: 110px;
+  display: block;
+  color: white;
+  float: left;
+  margin: 10px 0;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+</style>
