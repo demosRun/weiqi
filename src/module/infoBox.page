@@ -1,6 +1,6 @@
 <template>
   <ul class="info-box">
-    <div class="image-item" @for="item in data.imageList">
+    <div class="image-item clear" @for="item in data.imageList">
       <div class="left">
         <a target="_blank" href="{{item.url}}">
           <img class="left" src="@&image2.png&"/>
@@ -12,7 +12,6 @@
         </div>
         <div class="text">{{item.info}}</div>
       </div>
-      <div class="clear"></div>
     </div>
     <li class="new-item" @for="item in data.newsList">
       <a target="_blank" href="{{item.url}}">{{item.name}}</a>

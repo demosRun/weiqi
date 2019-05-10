@@ -1,9 +1,8 @@
 <template>
-  <div class="title-bar-RVyDyvJu8Y0Ui1bB">
+  <div class="title-bar-RVyDyvJu8Y0Ui1bB clear">
     <span class="title-bar-item" @for="item in data.itemLiat">
       <a target="_blank" href="{{item.url}}">{{item.name}}</a>
     </span>
-    <div class="clear"></div>
   </div>
 </template>
 

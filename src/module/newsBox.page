@@ -6,7 +6,7 @@
       <span class="title-bar-item">业余普及</span>
       <span class="title-bar-item">产&nbsp;业</span>
     </div>
-    <div class="consultation-panel">
+    <div class="consultation-panel clear">
       <div class="consultation-bar">
         <temple name="newsCard" src="./src/module/newsCard.page">
           <div class="image-box">
@@ -35,7 +35,6 @@
       <div class="consultation-bar">
         <temple name="newsCard6" src="./src/module/newsCard.page"></temple>
       </div>
-      <div class="clear"></div>
     </div>
   </div>
 </template>

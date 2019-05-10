@@ -1,6 +1,6 @@
 <template>
-  <div class="real-time-bar">
-    <div class="news-box">
+  <div class="real-time-bar clear">
+    <div class="news-box clear">
       <span class="tip">即时新闻</span>
       <div class="marquee-box">
         <marquee direction="left" scrollamount="3" width="520" height="34" onmousemove="stop()" onmouseout="start()">
@@ -16,7 +16,6 @@
           <a target="_blank" href="/n1/2019/0505/c22155-31063607.html" target="_blank">花游系列赛首日中国队摘金夺铜</a>
         </marquee>
       </div>
-      <div class="clear"></div>
     </div>
     <div class="search-box">
       <form action="http://search.people.com.cn/cnpeople/searchForChannel.do" name="searchForm" method="post" target="_blank">
@@ -28,7 +27,6 @@
         <input class="keyword-input" name="keyword" id="keyword" alt="search" value="新闻检索" onblur="if(this.value=='') this.value='新闻检索';this.style.color='#ccc';" onfocus="if(this.value=='新闻检索') this.value='';this.style.color='#000';" class="jianso_t" style="color: rgb(204, 204, 204);">
       </form> 
     </div>
-    <div class="clear"></div>
   </div>
 </template>
 
