@@ -91,6 +91,7 @@
       height: 30px;
       line-height: 30px;
       text-align: center;
+      font-family: Microsoft YaHei;
     }
 
     .real-time-bar {
@@ -242,8 +243,16 @@
       display: inline-block;
       width: 32%;
       font-size: 14px;
-      color: #595757;
+      color: black;
       overflow: hidden;
+      margin: 0;
+      line-height: 20px;
+      padding-top: 20px;
+    }
+
+    .news-head a {
+      display: block;
+      color: unset;
     }
 
     .consultation-box {
@@ -253,14 +262,14 @@
 
     .consultation-box .consultation-item {
       color: #595757;
-      line-height: 36px;
-      font-size: 14px;
+      line-height: 38px;
+      font-size: 15px;
       position: relative;
       cursor: pointer;
     }
 
     .consultation-box .consultation-item a {
-      color: #595757;
+      color: black;
       text-decoration: none;
     }
 
@@ -279,7 +288,7 @@
 
     .consultation-box li {
       overflow: hidden;
-      height: 36px;
+      height: 38px;
     }
 
     .consultation-box li:before {
@@ -318,6 +327,7 @@
       font-size: 20px;
       position: relative;
       font-weight: bold;
+      font-family: Microsoft YaHei;
     }
 
     .card-title-bar .more {
@@ -392,7 +402,7 @@
     }
 
     .info-box .image-item .title a {
-      color: #595757;
+      color: black;
     }
 
     .info-box .image-item .title .a:hover {
@@ -474,8 +484,8 @@
       padding: 0;
       margin: 0;
       margin-top: 15px;
-      font-size: 12px;
-      line-height: 20px;
+      font-size: 13px;
+      line-height: 21px;
       text-justify: inter-ideograph;
       word-break: break-all;
       text-align: left;
@@ -619,6 +629,7 @@
       width: 25%;
       padding-left: 10px;
       text-align: left;
+      font-family: Microsoft YaHei;
     }
 
     .switch-bar .consultation-bar {
@@ -629,6 +640,40 @@
     .switch-bar .consultation-panel {
       position: absolute;
       left: 0;
+    }
+
+    .card-title-bar {
+      width: 300px;
+      background-image: url('./static/resource/title-bg.png');
+      height: 40px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      text-align: center;
+      line-height: 40px;
+      color: #9d7657;
+      font-size: 20px;
+      position: relative;
+      font-weight: bold;
+      font-family: Microsoft YaHei;
+    }
+
+    .card-title-bar .more {
+      background-image: url('./static/resource/more.png');
+      width: 44px;
+      height: 12px;
+      position: absolute;
+      right: 15px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .card-title-bar .more a {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
     .ranking ul,
@@ -652,7 +697,7 @@
       width: 260px;
       padding: 20px;
       font-size: 12px;
-      background: #f8f8f8;
+      background: #fff8f4;
     }
 
     .ranking div:before {
@@ -665,7 +710,7 @@
       width: 20px;
       text-align: center;
       color: white;
-      font-size: 12px;
+      font-size: 13px;
       line-height: 20px;
       border-radius: 10px;
       float: left;
@@ -673,11 +718,14 @@
     }
 
     .ranking a {
-      color: #595757;
+      color: black;
       width: 230px;
-      overflow: hidden;
       height: 20px;
       float: left;
+      display: block;
+      overflow: hidden;
+      line-height: 20px;
+      font-size: 13px;
     }
 
     .ranking-item:after {
@@ -810,7 +858,7 @@
     }
 
     .example .news-list-box .consultation-item {
-      font-size: 12px;
+      font-size: 13px;
       line-height: 30px;
       height: 30px;
     }
@@ -837,11 +885,12 @@
       line-height: 95px;
     }
 
-    .example .title-bar {
+    .example .text-title-bar {
       color: #934e16;
       font-size: 20px;
       letter-spacing: 10px;
       font-weight: bold;
+      padding-top: 10px;
     }
   </style>
   <!-- 附属css文件 -->
@@ -955,11 +1004,19 @@
         </div>
         <div class="float news-item-box">
           <div class="news-head o-newsHead" template="newsHead">
-            <h1 class="main-text">阿森纳1-0返前四 对手送礼奥巴破门</h1>
+            <h1 class="main-text">
+              <a hred="#">阿森纳1-0返前四 对手送礼奥巴破门</a>
+            </h1>
             <div class="subheading">
-              <p class="subheading-item">标题标题标题标题</p>
-              <p class="subheading-item">标题标题标题标题</p>
-              <p class="subheading-item">标题标题标题标题</p>
+              <p class="subheading-item">
+                <a hred="#">标题标题标题标题</a>
+              </p>
+              <p class="subheading-item">
+                <a hred="#">标题标题标题标题</a>
+              </p>
+              <p class="subheading-item">
+                <a hred="#">标题标题标题标题</a>
+              </p>
             </div>
           </div>
           <ul class="consultation-box o-newsList" template="newsList">
@@ -968,7 +1025,7 @@
               <a target="_blank" href="http://www.people.com.cn/">雅加达，别说再见</a>
             </li>
             <li class="consultation-item">
-              <a target="_blank" href="http://www.people.com.cn/">雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运</a>
+              <a target="_blank" href="http://www.people.com.cn/">雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运</a>
             </li>
             <li class="consultation-item">
               <a target="_blank" href="http://www.people.com.cn/">高清：2018年雅加达亚运会 闭幕式盛况</a>
@@ -999,7 +1056,7 @@
               <a target="_blank" href="http://www.people.com.cn/">雅加达，别说再见</a>
             </li>
             <li class="consultation-item">
-              <a target="_blank" href="http://www.people.com.cn/">雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运</a>
+              <a target="_blank" href="http://www.people.com.cn/">雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运</a>
             </li>
             <li class="consultation-item">
               <a target="_blank" href="http://www.people.com.cn/">高清：2018年雅加达亚运会 闭幕式盛况</a>
@@ -1027,7 +1084,7 @@
               <a target="_blank" href="http://www.people.com.cn/">雅加达，别说再见</a>
             </li>
             <li class="consultation-item">
-              <a target="_blank" href="http://www.people.com.cn/">雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运</a>
+              <a target="_blank" href="http://www.people.com.cn/">雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运</a>
             </li>
             <li class="consultation-item">
               <a target="_blank" href="http://www.people.com.cn/">高清：2018年雅加达亚运会 闭幕式盛况</a>
@@ -1094,10 +1151,10 @@
         <div class="left float">
           <div class="switch-bar o-newsBox" template="newsBox">
             <div class="title-bar clear">
-              <span class="active title-bar-item">全&nbsp;&nbsp;部</span>
+              <span class="active title-bar-item">全&nbsp;部</span>
               <span class="title-bar-item">职业竞技</span>
               <span class="title-bar-item">业余普及</span>
-              <span class="title-bar-item">产&nbsp;&nbsp;业</span>
+              <span class="title-bar-item">产&nbsp;业</span>
             </div>
             <div class="consultation-panel">
               <div class="consultation-bar">
@@ -1135,9 +1192,7 @@
                       <a href="#"></a>
                     </div>
                     <!-- 分享按钮 -->
-                    <div class="bshare-custom fr">
-                      <div class="bsPromo bsPromo2"></div>
-                      <div class="bsPromo bsPromo2"></div>
+                    <div class="bshare-custom fr" @mousemove="share">
                       <a title="更多平台" class="bshare-more"></a>
                     </div>
                   </div>
@@ -1170,9 +1225,7 @@
                       <a href="#"></a>
                     </div>
                     <!-- 分享按钮 -->
-                    <div class="bshare-custom fr">
-                      <div class="bsPromo bsPromo2"></div>
-                      <div class="bsPromo bsPromo2"></div>
+                    <div class="bshare-custom fr" @mousemove="share">
                       <a title="更多平台" class="bshare-more"></a>
                     </div>
                   </div>
@@ -1205,9 +1258,7 @@
                       <a href="#"></a>
                     </div>
                     <!-- 分享按钮 -->
-                    <div class="bshare-custom fr">
-                      <div class="bsPromo bsPromo2"></div>
-                      <div class="bsPromo bsPromo2"></div>
+                    <div class="bshare-custom fr" @mousemove="share">
                       <a title="更多平台" class="bshare-more"></a>
                     </div>
                   </div>
@@ -1246,9 +1297,7 @@
                       <a href="#"></a>
                     </div>
                     <!-- 分享按钮 -->
-                    <div class="bshare-custom fr">
-                      <div class="bsPromo bsPromo2"></div>
-                      <div class="bsPromo bsPromo2"></div>
+                    <div class="bshare-custom fr" @mousemove="share">
                       <a title="更多平台" class="bshare-more"></a>
                     </div>
                   </div>
@@ -1293,9 +1342,7 @@
                       <a href="#"></a>
                     </div>
                     <!-- 分享按钮 -->
-                    <div class="bshare-custom fr">
-                      <div class="bsPromo bsPromo2"></div>
-                      <div class="bsPromo bsPromo2"></div>
+                    <div class="bshare-custom fr" @mousemove="share">
                       <a title="更多平台" class="bshare-more"></a>
                     </div>
                   </div>
@@ -1330,9 +1377,7 @@
                       <a href="#"></a>
                     </div>
                     <!-- 分享按钮 -->
-                    <div class="bshare-custom fr">
-                      <div class="bsPromo bsPromo2"></div>
-                      <div class="bsPromo bsPromo2"></div>
+                    <div class="bshare-custom fr" @mousemove="share">
                       <a title="更多平台" class="bshare-more"></a>
                     </div>
                   </div>
@@ -1367,9 +1412,7 @@
                       <a href="#"></a>
                     </div>
                     <!-- 分享按钮 -->
-                    <div class="bshare-custom fr">
-                      <div class="bsPromo bsPromo2"></div>
-                      <div class="bsPromo bsPromo2"></div>
+                    <div class="bshare-custom fr" @mousemove="share">
                       <a title="更多平台" class="bshare-more"></a>
                     </div>
                   </div>
@@ -1381,10 +1424,7 @@
         </div>
         <!-- 右侧新闻排行区域 -->
         <div class="right float">
-          <div class="card-title-bar o-cardTitleBar4" template="cardTitleBar4">新闻排行<div class="more">
-              <a href="#"></a>
-            </div>
-          </div>
+          <div class="card-title-bar o-cardTitleBar4" template="cardTitleBar4">新闻排行</div>
           <div class="ranking o-newsRanking" template="newsRanking">
             <div class="ranking-item">
               <span class="index"></span>
@@ -1427,7 +1467,7 @@
               <a href="http://qipai.people.com.cn/n1/2019/0508/c426667-31074165.html" title="“嫘祖杯”第32届中国围棋名人战正式开幕" target="_blank">“嫘祖杯”第32届中国围棋名人战…</a>
             </div>
           </div>
-          <div class="title-bar">推荐</div>
+          <div class="text-title-bar">推荐</div>
           <div class="ad o-ad" template="ad">
             <a target="_blank" href="#">
               广告位
@@ -1541,7 +1581,7 @@
                   "url": "http://www.people.com.cn/",
                   "time": "2018-09-03 13:38"
                 }, {
-                  "name": "雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运",
+                  "name": "雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运",
                   "url": "http://www.people.com.cn/",
                   "time": "2018-09-03 13:38"
                 }, {
@@ -1660,6 +1700,7 @@
               }
             },
             "newsCard": {
+              "data": {},
               "created": function created() {
                 // 判断是否包含图片
                 var imageBoxList = this.$el.getElementsByClassName('image-box'); // console.log(imageBoxList.length)
@@ -1667,9 +1708,24 @@
                 if (imageBoxList.length > 0) {
                   this.$el.style.height = '200px';
                   this.$el.getElementsByClassName('news-content')[0].classList.add('image');
+                  this.data.pic = imageBoxList[0].getElementsByTagName('img')[0].src;
                 } else {
                   this.$el.classList.add('no-image');
-                }
+                } // 获取分享信息
+
+
+                var dom = this.$el;
+                this.data.title = dom.getElementsByTagName('h1')[0].innerText;
+                this.data.url = dom.getElementsByClassName('text-box')[0].getElementsByTagName('a')[0].href;
+                this.data.summary = dom.getElementsByTagName('p')[0].innerText;
+              },
+              "share": function share() {
+                bShare.addEntry({
+                  title: this.data.title,
+                  url: this.data.url,
+                  summary: this.data.summary,
+                  pic: this.data.pic
+                });
               },
               "prop": {
                 "name": "newsCard",
@@ -1677,6 +1733,7 @@
               }
             },
             "newsCard1": {
+              "data": {},
               "created": function created() {
                 // 判断是否包含图片
                 var imageBoxList = this.$el.getElementsByClassName('image-box'); // console.log(imageBoxList.length)
@@ -1684,9 +1741,24 @@
                 if (imageBoxList.length > 0) {
                   this.$el.style.height = '200px';
                   this.$el.getElementsByClassName('news-content')[0].classList.add('image');
+                  this.data.pic = imageBoxList[0].getElementsByTagName('img')[0].src;
                 } else {
                   this.$el.classList.add('no-image');
-                }
+                } // 获取分享信息
+
+
+                var dom = this.$el;
+                this.data.title = dom.getElementsByTagName('h1')[0].innerText;
+                this.data.url = dom.getElementsByClassName('text-box')[0].getElementsByTagName('a')[0].href;
+                this.data.summary = dom.getElementsByTagName('p')[0].innerText;
+              },
+              "share": function share() {
+                bShare.addEntry({
+                  title: this.data.title,
+                  url: this.data.url,
+                  summary: this.data.summary,
+                  pic: this.data.pic
+                });
               },
               "prop": {
                 "name": "newsCard1",
@@ -1694,6 +1766,7 @@
               }
             },
             "newsCard2": {
+              "data": {},
               "created": function created() {
                 // 判断是否包含图片
                 var imageBoxList = this.$el.getElementsByClassName('image-box'); // console.log(imageBoxList.length)
@@ -1701,9 +1774,24 @@
                 if (imageBoxList.length > 0) {
                   this.$el.style.height = '200px';
                   this.$el.getElementsByClassName('news-content')[0].classList.add('image');
+                  this.data.pic = imageBoxList[0].getElementsByTagName('img')[0].src;
                 } else {
                   this.$el.classList.add('no-image');
-                }
+                } // 获取分享信息
+
+
+                var dom = this.$el;
+                this.data.title = dom.getElementsByTagName('h1')[0].innerText;
+                this.data.url = dom.getElementsByClassName('text-box')[0].getElementsByTagName('a')[0].href;
+                this.data.summary = dom.getElementsByTagName('p')[0].innerText;
+              },
+              "share": function share() {
+                bShare.addEntry({
+                  title: this.data.title,
+                  url: this.data.url,
+                  summary: this.data.summary,
+                  pic: this.data.pic
+                });
               },
               "prop": {
                 "name": "newsCard2",
@@ -1711,6 +1799,7 @@
               }
             },
             "newsCard3": {
+              "data": {},
               "created": function created() {
                 // 判断是否包含图片
                 var imageBoxList = this.$el.getElementsByClassName('image-box'); // console.log(imageBoxList.length)
@@ -1718,9 +1807,24 @@
                 if (imageBoxList.length > 0) {
                   this.$el.style.height = '200px';
                   this.$el.getElementsByClassName('news-content')[0].classList.add('image');
+                  this.data.pic = imageBoxList[0].getElementsByTagName('img')[0].src;
                 } else {
                   this.$el.classList.add('no-image');
-                }
+                } // 获取分享信息
+
+
+                var dom = this.$el;
+                this.data.title = dom.getElementsByTagName('h1')[0].innerText;
+                this.data.url = dom.getElementsByClassName('text-box')[0].getElementsByTagName('a')[0].href;
+                this.data.summary = dom.getElementsByTagName('p')[0].innerText;
+              },
+              "share": function share() {
+                bShare.addEntry({
+                  title: this.data.title,
+                  url: this.data.url,
+                  summary: this.data.summary,
+                  pic: this.data.pic
+                });
               },
               "prop": {
                 "name": "newsCard3",
@@ -1728,6 +1832,7 @@
               }
             },
             "newsCard4": {
+              "data": {},
               "created": function created() {
                 // 判断是否包含图片
                 var imageBoxList = this.$el.getElementsByClassName('image-box'); // console.log(imageBoxList.length)
@@ -1735,9 +1840,24 @@
                 if (imageBoxList.length > 0) {
                   this.$el.style.height = '200px';
                   this.$el.getElementsByClassName('news-content')[0].classList.add('image');
+                  this.data.pic = imageBoxList[0].getElementsByTagName('img')[0].src;
                 } else {
                   this.$el.classList.add('no-image');
-                }
+                } // 获取分享信息
+
+
+                var dom = this.$el;
+                this.data.title = dom.getElementsByTagName('h1')[0].innerText;
+                this.data.url = dom.getElementsByClassName('text-box')[0].getElementsByTagName('a')[0].href;
+                this.data.summary = dom.getElementsByTagName('p')[0].innerText;
+              },
+              "share": function share() {
+                bShare.addEntry({
+                  title: this.data.title,
+                  url: this.data.url,
+                  summary: this.data.summary,
+                  pic: this.data.pic
+                });
               },
               "prop": {
                 "name": "newsCard4",
@@ -1745,6 +1865,7 @@
               }
             },
             "newsCard5": {
+              "data": {},
               "created": function created() {
                 // 判断是否包含图片
                 var imageBoxList = this.$el.getElementsByClassName('image-box'); // console.log(imageBoxList.length)
@@ -1752,9 +1873,24 @@
                 if (imageBoxList.length > 0) {
                   this.$el.style.height = '200px';
                   this.$el.getElementsByClassName('news-content')[0].classList.add('image');
+                  this.data.pic = imageBoxList[0].getElementsByTagName('img')[0].src;
                 } else {
                   this.$el.classList.add('no-image');
-                }
+                } // 获取分享信息
+
+
+                var dom = this.$el;
+                this.data.title = dom.getElementsByTagName('h1')[0].innerText;
+                this.data.url = dom.getElementsByClassName('text-box')[0].getElementsByTagName('a')[0].href;
+                this.data.summary = dom.getElementsByTagName('p')[0].innerText;
+              },
+              "share": function share() {
+                bShare.addEntry({
+                  title: this.data.title,
+                  url: this.data.url,
+                  summary: this.data.summary,
+                  pic: this.data.pic
+                });
               },
               "prop": {
                 "name": "newsCard5",
@@ -1762,6 +1898,7 @@
               }
             },
             "newsCard6": {
+              "data": {},
               "created": function created() {
                 // 判断是否包含图片
                 var imageBoxList = this.$el.getElementsByClassName('image-box'); // console.log(imageBoxList.length)
@@ -1769,9 +1906,24 @@
                 if (imageBoxList.length > 0) {
                   this.$el.style.height = '200px';
                   this.$el.getElementsByClassName('news-content')[0].classList.add('image');
+                  this.data.pic = imageBoxList[0].getElementsByTagName('img')[0].src;
                 } else {
                   this.$el.classList.add('no-image');
-                }
+                } // 获取分享信息
+
+
+                var dom = this.$el;
+                this.data.title = dom.getElementsByTagName('h1')[0].innerText;
+                this.data.url = dom.getElementsByClassName('text-box')[0].getElementsByTagName('a')[0].href;
+                this.data.summary = dom.getElementsByTagName('p')[0].innerText;
+              },
+              "share": function share() {
+                bShare.addEntry({
+                  title: this.data.title,
+                  url: this.data.url,
+                  summary: this.data.summary,
+                  pic: this.data.pic
+                });
               },
               "prop": {
                 "name": "newsCard6",
@@ -1859,7 +2011,7 @@
           "prop": {
             "name": "cardTitleBar4",
             "title": "新闻排行",
-            "src": "./src/module/cardTitleBar.page"
+            "src": "./src/module/cardTitleBar2.page"
           }
         },
         "float": {

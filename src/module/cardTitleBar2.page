@@ -1,5 +1,5 @@
 <template>
-  <div class="card-title-bar">{{prop.title}}<div class="more"><a href="#"></a></div></div>
+  <div class="card-title-bar">{{prop.title}}</div>
 </template>
 
 <style lang="less">

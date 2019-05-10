@@ -6,8 +6,11 @@ body, html {
   user-select: text;
   min-width: 1200px;
   overflow-x: hidden;
-  font-family: Microsoft YaHei;
+  font-family: "SimSun";
   -webkit-overflow-scrolling: touch;
+}
+h1 {
+  font-family: Microsoft YaHei;
 }
 html {
   background-color: white;
@@ -55,7 +58,7 @@ a:hover {
 }
 
 .o-newsList {
-  height: 220px;
+  height: 260px;
   overflow: hidden;
 }
 
@@ -84,4 +87,8 @@ a:hover {
 
 .no-image {
   padding-bottom: 20px;
+}
+
+.banner .consultation-box .consultation-item {
+  width: 420px;
 }

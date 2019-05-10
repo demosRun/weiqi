@@ -1,10 +1,10 @@
 <template>
   <div class="switch-bar">
     <div class="title-bar clear">
-      <span class="active title-bar-item">全&nbsp;&nbsp;部</span>
+      <span class="active title-bar-item">全&nbsp;部</span>
       <span class="title-bar-item">职业竞技</span>
       <span class="title-bar-item">业余普及</span>
-      <span class="title-bar-item">产&nbsp;&nbsp;业</span>
+      <span class="title-bar-item">产&nbsp;业</span>
     </div>
     <div class="consultation-panel">
       <div class="consultation-bar">
@@ -129,6 +129,7 @@
   width: 25%;
   padding-left: 10px;
   text-align: left;
+  font-family: Microsoft YaHei;
 }
 .consultation-bar {
   height: 100%;

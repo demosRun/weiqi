@@ -11,7 +11,7 @@
     data: {
       itemLiat: [
         {"name": "雅加达，别说再见", "url": "http://www.people.com.cn/", "time": "2018-09-03 13:38"},
-        {"name": "雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运", "url": "http://www.people.com.cn/", "time": "2018-09-03 13:38"},
+        {"name": "雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运雅加达亚运夺金练兵兼顾 中国军团提速迈向东京奥运", "url": "http://www.people.com.cn/", "time": "2018-09-03 13:38"},
         {"name": "高清：2018年雅加达亚运会 闭幕式盛况", "url": "http://www.people.com.cn/", "time": "2018-09-03 13:38"},
         {"name": "高清：2018雅加达亚运会闭幕式 亚运会会旗交接仪式", "url": "http://www.people.com.cn/", "time": "2018-09-03 13:38"},
         {"name": "高清：2018雅加达亚运会闭幕式 “杭州八分钟”惊艳呈现", "url": "http://www.people.com.cn/", "time": "2018-09-03 13:38"},
@@ -28,12 +28,12 @@
 }
 .consultation-item {
   color: #595757;
-  line-height: 36px;
-  font-size: 14px;
+  line-height: 38px;
+  font-size: 15px;
   position: relative;
   cursor: pointer;
   a {
-    color: #595757;
+    color: black;
     text-decoration: none;
   }
   a:hover {
@@ -50,7 +50,7 @@
 }
 li {
   overflow: hidden;
-  height: 36px;
+  height: 38px;
 }
 li:before {
   content: '•';

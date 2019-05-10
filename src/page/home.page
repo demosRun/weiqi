@@ -42,9 +42,9 @@
         </div>
         <!-- 右侧新闻排行区域 -->
         <div class="right float">
-          <temple name="cardTitleBar4" title="新闻排行" src="./src/module/cardTitleBar.page"></temple>
+          <temple name="cardTitleBar4" title="新闻排行" src="./src/module/cardTitleBar2.page"></temple>
           <temple name="newsRanking" src="./src/module/newsRanking.page"></temple>
-          <div class="title-bar">推荐</div>
+          <div class="text-title-bar">推荐</div>
           <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
           <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
           <temple name="ad" src="https://owo.ink/public/460d423b76bb31212445358f55f7ccc8.page"></temple>
@@ -118,7 +118,7 @@
       margin: 0 10px;
     }
     .consultation-item {
-      font-size: 12px;
+      font-size: 13px;
       line-height: 30px;
       height: 30px;
     }
@@ -142,10 +142,11 @@
       line-height: 95px;
     }
   }
-  .title-bar {
+  .text-title-bar {
     color: #934e16;
     font-size: 20px;
     letter-spacing: 10px;
     font-weight: bold;
+    padding-top: 10px;
   }
 </style>

@@ -50,7 +50,7 @@ ul {
   width: 260px;
   padding: 20px;
   font-size: 12px;
-  background: #f8f8f8;
+  background: #fff8f4;
 }
 div:before {
   background-color: aqua;
@@ -61,18 +61,21 @@ span {
   width: 20px;
   text-align: center;
   color: white;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 20px;
   border-radius: 10px;
   float: left;
   margin-right: 10px;
 }
 a {
-  color: #595757;
+  color: black;
   width: 230px;
-  overflow: hidden;
   height: 20px;
   float: left;
+  display: block;
+  overflow: hidden;
+  line-height: 20px;
+  font-size: 13px;
 }
 .ranking-item:after {
   content: "";

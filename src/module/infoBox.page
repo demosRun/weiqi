@@ -75,7 +75,7 @@
     line-height: 40px;
     color: #595757;
     a {
-      color: #595757;
+      color: black;
     }
     .a:hover {
       color: #c00;

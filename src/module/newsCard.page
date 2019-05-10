@@ -17,9 +17,7 @@
         <a href="#"></a>
       </div>
       <!-- 分享按钮 -->
-      <div class="bshare-custom fr">
-        <div class="bsPromo bsPromo2"></div>
-        <div class="bsPromo bsPromo2"></div>
+      <div class="bshare-custom fr" @mousemove="share">
         <a title="更多平台" class="bshare-more"></a>
       </div>
     </div>
@@ -28,6 +26,9 @@
 
 <script>
   module.exports = {
+    data: {
+
+    },
     created: function () {
       // 判断是否包含图片
       const imageBoxList = this.$el.getElementsByClassName('image-box')
@@ -35,9 +36,24 @@
       if (imageBoxList.length > 0) {
         this.$el.style.height = '200px'
         this.$el.getElementsByClassName('news-content')[0].classList.add('image')
+
+        this.data.pic = imageBoxList[0].getElementsByTagName('img')[0].src
       } else {
         this.$el.classList.add('no-image')
       }
+      // 获取分享信息
+      const dom = this.$el
+      this.data.title = dom.getElementsByTagName('h1')[0].innerText
+      this.data.url = dom.getElementsByClassName('text-box')[0].getElementsByTagName('a')[0].href
+      this.data.summary = dom.getElementsByTagName('p')[0].innerText
+    },
+    share: function () {
+      bShare.addEntry({
+        title: this.data.title,
+        url: this.data.url,
+        summary: this.data.summary,
+        pic: this.data.pic
+      })
     }
   }
 </script>
@@ -72,8 +88,8 @@ a, img {
     padding: 0;
     margin: 0;
     margin-top: 15px;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 21px;
     text-justify: inter-ideograph;
     word-break: break-all;
     text-align: left;
